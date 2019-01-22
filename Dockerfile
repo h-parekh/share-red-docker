@@ -20,6 +20,10 @@ USER node-red
 COPY package.json /usr/src/node-red/
 RUN npm install
 
+# This command has to be run after npm install. It overwrites the settings.js with
+#  share-research specific settings
+COPY settings.js /data
+
 # User configuration directory volume
 EXPOSE 1880
 
