@@ -29,7 +29,9 @@
         "node-red-node-base64": "*",
         "node-red-node-suncalc": "*",
         "node-red-node-random": "*",
-        "share-lower-case": "latest"
+        "share-lower-case": "latest",
+        "node-red-contrib-wait-paths": "^0.2.12",
+        "node-red-contrib-splitter": "0.0.16"
     },
     "engines": {
         "node": "10.*.*"
