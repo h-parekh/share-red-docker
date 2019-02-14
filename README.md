@@ -3,7 +3,7 @@ A repository to run node-red in Docker for share-research customizations
 
 ## Project Layout
 
-This repository contains Dockerfiles to build the share-red Docker image.
+This repository contains Dockerfile to build the share-red Docker image.
 
 Build these images with the following command...
 
@@ -35,4 +35,9 @@ This is the command that starts Node-RED when the container is run.
 To run this directly in docker at it's simplest just run
 ```console
     docker run -it -p 1880:1880 --name <a-container-name> mynodered:<version>
+```
+
+## Load a project from github (WIP - script needs parameterization)
+```console
+    docker exec -d <a-container-name> ./node-red-projects.sh
 ```
