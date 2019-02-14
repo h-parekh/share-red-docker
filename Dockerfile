@@ -3,6 +3,7 @@ FROM node:${NODE_VERSION}
 
 # Home directory for Node-RED application source code.
 RUN mkdir -p /usr/src/node-red
+RUN mkdir -p /usr/src/node-red/projects
 
 WORKDIR /usr/src/node-red
 
@@ -19,6 +20,7 @@ RUN npm install
 # This command has to be run after npm install. It overwrites the settings.js with
 #  share-research specific settings
 COPY settings.js /usr/src/node-red
+COPY bin/node-red-projects.sh /usr/src/node-red
 
 # User configuration directory volume
 EXPOSE 1880
